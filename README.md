@@ -1,6 +1,6 @@
 # beeline
 
-Live app: https://dylanpyle.github.io/beeline
+Live web app: https://dylanpyle.github.io/beeline
 
 ## What?
 
@@ -20,13 +20,16 @@ exist, this is just my attempt to learn through building.
 
 ## How?
 
-There are two entry points to the codebase:
+There are three entry points to the codebase:
 
-- `bin/build-lookup-table` — Ingests `data/words` and compiles a data structure
-  to make word lookups more efficient; writes this to `data/words.lookup.json`.
-- `docs/index.html` — a web frontend for looking up words against this list.
-  Compiled from the contents of `src/` and `static/`.
-
+- `bin/build-lookup-table.ts`
+  - Ingests `data/words` and compiles a data structure to make word lookups more
+    efficient; writes this to `data/words.lookup.json`.
+- `bin/find-words.ts <optional letters> <required letter>`
+  - A CLI interface for finding words; e.g. `bin/find-words.ts abcdef g`
+- `docs/index.html`
+  - A web frontend for finding words. Compiled from the contents of `src/web.ts`
+    and `static/`.
 
 ## Tools
 
