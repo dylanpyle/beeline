@@ -1,0 +1,23 @@
+{
+  "name": "beeline",
+  "version": "1.0.0",
+  "description": "a tool to find solutions to the Spelling Bee puzzle",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p docs && cp static/* docs && tsc",
+    "dev": "nodemon -e ts,html,css -w ./src --exec 'npm run build'",
+    "format": "prettier src/*.ts --write"
+  },
+  "keywords": [],
+  "author": "Dylan <me@dylanpyle.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@types/tape": "^4.13.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "tape": "^5.0.1"
+  }
+}
