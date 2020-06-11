@@ -1,6 +1,6 @@
-import getSortedKey from './get-sorted-key';
-import { WordLookup } from './build-lookup-table';
-import findPowerSet from './power-set';
+import getSortedKey from "./get-sorted-key";
+import { WordLookup } from "./build-lookup-table";
+import findPowerSet from "./power-set";
 
 interface Options {
   optionalLetters: string[];
@@ -14,16 +14,18 @@ export default function findWords(options: Options): string[] {
 
   const allowedLetters = optionalLetters.concat(requiredLetter);
 
-  const normalized = getSortedKey(allowedLetters.join('')).split('');
+  const normalized = getSortedKey(allowedLetters.join("")).split("");
   const powerSet = findPowerSet<string>(normalized);
 
   const result: string[] = [];
 
   for (const set of powerSet) {
     if (set.indexOf(requiredLetter) > -1) {
-      const words = lookupTable[set.join('')];
+      const words = lookupTable[set.join("")];
       if (words) {
-        const allowedWords = words.filter((word: string) => word.length >= minLength);
+        const allowedWords = words.filter(
+          (word: string) => word.length >= minLength
+        );
         result.push(...allowedWords);
       }
     }

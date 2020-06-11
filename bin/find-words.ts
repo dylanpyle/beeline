@@ -1,6 +1,6 @@
 #!./node_modules/.bin/ts-node
 
-import lookupTable from '../data/words.lookup.json';
+import lookupTable from '../static/words.lookup.json';
 import findWords from '../src/find-words';
 import { WordLookup } from '../src/build-lookup-table';
 

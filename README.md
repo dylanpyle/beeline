@@ -2,6 +2,8 @@
 
 Live web app: https://dylanpyle.github.io/beeline
 
+CLI: `npx beeline-solver`
+
 ## What?
 
 A tool to find solutions to the New York Times' [Spelling
@@ -27,15 +29,15 @@ There are three entry points to the codebase:
     efficient; writes this to `static/words.lookup.json`.
 - `bin/find-words.ts <optional letters> <required letter>`
   - A CLI interface for finding words; e.g. `bin/find-words.ts abcdef g`
-- `docs/index.html`
-  - A web frontend for finding words. Compiled from the contents of `src/web.ts`
-    and `static/`.
+- `src/web.ts`
+  - A web frontend for finding words.
 
 ## Tools
 
 - `bin/dev` - start local dev server, watching for changes
 - `bin/test [filename]` - run one or all `tape` test suites
 - `bin/build` - compile TS and static assets to `docs/`
+- `bin/publish` - release new changes to Github Pages
 
 ## Caveats
 

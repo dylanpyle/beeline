@@ -1,4 +1,4 @@
-import getSortedKey from './get-sorted-key';
+import getSortedKey from "./get-sorted-key";
 
 export interface WordLookup {
   [sortedKey: string]: string[] | undefined;
@@ -19,4 +19,3 @@ export default function buildLookupTable(wordList: string[]): WordLookup {
 
   return result;
 }
-

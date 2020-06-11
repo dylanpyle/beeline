@@ -1,25 +1,24 @@
 {
-  "name": "beeline",
+  "name": "beeline-solver",
   "version": "1.0.0",
   "description": "a tool to find solutions to the Spelling Bee puzzle",
-  "main": "index.html",
-  "scripts": {
-    "build": "mkdir -p docs && cp static/* docs && tsc",
-    "dev": "nodemon -e ts,html,css -w ./src --exec 'npm run build'",
-    "format": "prettier src/*.ts --write"
-  },
+  "main": "bin",
+  "scripts": {},
   "keywords": [],
   "author": "Dylan <me@dylanpyle.com>",
   "license": "MIT",
   "dependencies": {
     "tslib": "^2.0.0",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.3",
+    "ts-node": "^8.10.2"
+  },
+  "bin": {
+    "beeline-solver": "bin/find-words.ts"
   },
   "devDependencies": {
     "@types/tape": "^4.13.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
-    "tape": "^5.0.1",
-    "ts-node": "^8.10.2"
+    "tape": "^5.0.1"
   }
 }

@@ -5,8 +5,8 @@ set -o nounset
 set -o pipefail
 
 main() {
-  mkdir -p docs
-  cp static/* docs
+  mkdir -p dist
+  cp static/* dist
   npx tsc -p tsconfig.web.json
 }
 
