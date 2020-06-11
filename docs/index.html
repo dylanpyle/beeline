@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='a solver'>
+    <link href='style.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href='favicon.svg' rel='icon' type='image/svg+xml'>
+    <title>beeline</title>
+  </head>
+  <body>
+    <h1>beeline</h1>
+    <p>A solver</p>
+    <form class='beeline-form'>
+      <label>
+        Optional letters:
+        <input type='text' maxlength='5' minlength='5' required validate class='optional-letters' />
+      </label>
+      <label>
+        Required letter:
+        <input type='text' maxlength='1' minlength='1' required validate class='required-letter' />
+      </label>
+      <button type='button'>Submit</button>
+    </form>
+    <script src='web.js'></script>
+  </body>
+</html>

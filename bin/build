@@ -3,12 +3,11 @@
 set -o errexit
 set -o nounset
 set -o pipefail
-set -o noglob
 
 main() {
   mkdir -p docs
   cp static/* docs
-  npx tsc
+  npx tsc -p tsconfig.web.json
 }
 
 main "$@"

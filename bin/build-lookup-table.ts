@@ -11,7 +11,7 @@ const lookupTable = buildLookupTable(words);
 const serializedTable = JSON.stringify(lookupTable, null, 2);
 
 fs.writeFileSync(
-  path.join(__dirname, '..', 'data', 'words.lookup.json'),
+  path.join(__dirname, '..', 'static', 'words.lookup.json'),
   serializedTable
 );
 

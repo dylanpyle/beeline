@@ -7,7 +7,7 @@ import { WordLookup } from '../src/build-lookup-table';
 const optionalLetters = process.argv[2].split('');
 const requiredLetter = process.argv[3];
 
-console.log('optional;', optionalLetters, 'required;', requiredLetter);
+console.log({ optionalLetters, requiredLetter });
 
 const words = findWords({
   optionalLetters,

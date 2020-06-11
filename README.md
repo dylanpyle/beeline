@@ -24,7 +24,7 @@ There are three entry points to the codebase:
 
 - `bin/build-lookup-table.ts`
   - Ingests `data/words` and compiles a data structure to make word lookups more
-    efficient; writes this to `data/words.lookup.json`.
+    efficient; writes this to `static/words.lookup.json`.
 - `bin/find-words.ts <optional letters> <required letter>`
   - A CLI interface for finding words; e.g. `bin/find-words.ts abcdef g`
 - `docs/index.html`
@@ -39,4 +39,5 @@ There are three entry points to the codebase:
 
 ## Caveats
 
-I don't use the same word list as the NYT, because I don't have theirs!
+I don't use the same word list as the NYT, because I don't have theirs! A
+closer-match wordlist would be a very appreciated contribution.

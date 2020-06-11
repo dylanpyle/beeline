@@ -6,7 +6,8 @@ set -o pipefail
 set -o noglob
 
 main() {
-  npx ts-node $1
+  files=${@:-"src/**/*.spec.ts"}
+  npx ts-node ./node_modules/.bin/tape $files
 }
 
 main "$@"
